@@ -1,0 +1,7 @@
+body{
+    font-family: "Times New Roman" !important;
+    font-size: 1em;
+}
+.create-room-table thead tr .room-no{
+    width: 150px;
+}

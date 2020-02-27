@@ -1,0 +1,145 @@
+body{
+    font-family: "Times New Roman" !important;
+    font-size: 1em;
+}
+.collapsing {
+  transition: none !important;
+}
+.create-room-table .room-type{
+    background-color: #dde8f7;
+}
+.create-room-table .room-list-no,.create-room-table .room-list-guest{
+    width: 150px;
+}
+
+.currency-table .td-date{
+    padding:0 10px;
+    margin-bottom: 10px;
+}
+.currency-table .td-room-no{
+    width: 130px;
+    padding:0 10px;
+}
+.currency-table .td-guest{
+    width: 200px;
+    padding:0 10px;
+}
+.currency-table .td-room-type{
+    width: 150px;
+    padding:0 10px;
+}
+
+.currency-input-table .c-input-amt{
+    width: 150px;
+    padding: 0 10px;
+}
+.currency-input-table .c-input-currency{
+    width: 150px;
+    padding: 0 10px;
+}
+.currency-input-table .c-input-rate{
+    width: 150px;
+    padding: 0 10px;
+}
+.currency-input-table .c-input-amt-mmk{
+    width: 150px;
+    padding: 0 10px;
+}
+.currency-input-table .c-input-save .btn{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+
+.currency-detail-table{
+    border-collapse: collapse;
+    border:1px solid #ced4da;
+}
+.currency-detail-table thead th{
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding:8px;
+}
+.currency-detail-table tfoot td{
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding:8px;
+}
+.currency-detail-table tbody tr td{
+    border: 1px solid #ced4da;
+    padding:5px 10px;
+    text-align: center;
+}
+.currency-detail-table .second-tr th{
+    background-color: #dde8f7;
+}
+.currency-detail-table .second-tr .c-date{
+    width: 130px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-transition{
+    width: 130px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-ammount{
+    width: 100px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-currency{
+    width: 100px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-rate{
+    width: 100px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-mmk{
+    width: 150px;
+    padding:5 10px;
+}
+.currency-detail-table .second-tr .c-action{
+    width: 150px;
+    padding:5 10px;
+}
+.currency-detail-table tr:nth-child(odd){
+    background-color:#dde8f7;
+}
+
+
+.total-balance-table{
+    border-collapse: collapse;
+    border:1px solid #ced4da;
+}
+.total-balance-table thead th{
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding:8px;
+    width: 150px;
+}
+.total-balance-table tbody tr td{
+    border: 1px solid #ced4da;
+    padding:5px 10px;
+    text-align: center;
+}
+.total-balance-table tr:nth-child(odd){
+    background-color:#dde8f7;
+}
+
+.receivable-table{
+    border-collapse: collapse;
+    border:1px solid #ced4da;
+}
+.receivable-table thead th{
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding:8px;
+    width: 200px;
+}
+.receivable-table tbody tr td{
+    border: 1px solid #ced4da;
+    padding:5px 10px;
+    text-align: center;
+}
+.receivable-table tr:nth-child(odd){
+    background-color:#dde8f7;
+}

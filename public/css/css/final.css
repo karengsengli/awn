@@ -1,0 +1,112 @@
+body{
+  font-family: "Times New Roman" !important;
+  font-size: 1em;
+}
+.custom-table{
+      border-collapse:collapse;
+      width:max-content;
+      border:solid 1px #c0c0c0;
+      font-family:"Times New Roman";
+      font-size:1em;
+}
+.custom-table th{
+      text-align: center;
+}
+.custom-table td{
+      text-align: left;
+}
+.custom-table th,.custom-table td{
+      width: 150px;
+      padding:8px;
+      border:solid 1px #c0c0c0;
+}
+.custom-table tr:nth-child(odd){
+      background-color:#f7f7ff;
+}
+
+.toggler{
+      display:none;
+}
+.toggler1{
+      display:table-row;
+}
+
+.page-header{
+      background-color: #dde8f7;
+}
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    visibility: hidden;
+}
+
+.collapse.show {
+    -webkit-transition: none;
+    transition: none;
+    visibility: visible;
+}
+
+.diagonal {
+  position: absolute;
+  width: 102%;
+  top:20%;
+  right: -30%;
+  background-color: green;
+  transform: skewX(30deg);
+  /*transform-origin: top;*/
+  margin-right:-20%;
+  /* Zentriert den Inhalt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  border-radius: 2px;
+}
+
+.diagonal_end > span {
+    transform: skewX(-30deg);
+}
+
+.tdHovered{
+  background-color: gray;
+  color: #fff;
+}
+.th-width{
+  width: 250px;
+}
+.diagonal_end {
+  position: absolute;
+  width: 95%;
+  top:20%;
+  right: -30%;
+  background-color: green;
+  transform: skewX(30deg);
+  /*transform-origin: top;*/
+  margin-right:-20%;
+  /* Zentriert den Inhalt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  z-index: 99999;
+}
+.diagonal_first {
+  position: absolute;
+  width: 50%;
+  top:20%;
+  right: -30%;
+  background-color: green;
+
+  transform-origin: bottom left;
+        -ms-transform: skew(-0deg,0deg);
+        -webkit-transform: skew(-0deg,0deg);
+        transform: skew(-0deg,0deg);
+  /*transform-origin: top;*/
+  margin-right:-20%;
+  /* Zentriert den Inhalt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  z-index: 99999;
+}

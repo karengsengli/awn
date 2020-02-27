@@ -1,0 +1,42 @@
+body{
+    font-family: "Times New Roman" !important;
+    font-size: 1em;
+}
+.create-room-table{
+    border-collapse:collapse;
+    border:solid 1px #c0c0c0;
+}
+.create-room-table thead tr .no{
+    width: 50px;
+}
+
+.create-room-table thead tr .id{
+    width: 70px;
+}
+.create-room-table thead tr .room-type{
+    width: 150px;
+}
+.create-room-table thead tr .room-count{
+    width: 120px;
+}
+.create-room-table thead tr .action{
+    width: 250px;
+}
+.create-room-table thead{
+    text-align: center;
+}
+.create-room-table tbody{
+    text-align: left;
+}
+
+.create-room-table th,.create-room-table td{
+    padding:8px;
+    border:solid 1px #c0c0c0;
+}
+.create-room-table tr:nth-child(odd){
+    background-color:#dde8f7;
+}
+.error {
+   color: red;
+   font-size: 12px;
+}

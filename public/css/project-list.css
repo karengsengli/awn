@@ -1,0 +1,45 @@
+.project-list-table{
+    border-collapse: collapse;
+    border:solid 1px #c0c0c0;
+}
+.project-list-table thead tr th{
+     border:solid 1px #c0c0c0;
+     padding:8px 0;
+}
+.project-list-table thead tr .no{
+    width: 50px;
+}
+.project-list-table thead tr .title{
+    width: 250px;
+}
+.project-list-table thead tr .subtitle{
+    width: 300px;
+}
+.project-list-table thead tr .body{
+    width: 150px;
+}
+.project-list-table thead tr .client{
+    width: 150px;
+}
+.project-list-table thead tr .client-web{
+    width:200px;
+}
+.project-list-table thead tr .completed-date{
+    width:200px;
+}
+.project-list-table thead tr .created{
+    width:200px;
+}
+.project-list-table thead tr .updated{
+    width:200px;
+}
+.project-list-table thead tr .actions{
+    width:200px;
+}
+.project-list-table tbody tr td{
+    padding:8px;
+    border:solid 1px #c0c0c0;
+}
+.project-list-table tbody tr:nth-child(odd){
+    background-color:#dde8f7;
+}

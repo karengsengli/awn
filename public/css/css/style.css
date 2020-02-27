@@ -1,0 +1,41 @@
+*{
+    font-family: "Times New Roman" !important;
+    font-size: 0.99em;
+}
+body{
+    margin:o;
+    padding:0;
+    background:#f1f1f1;
+}
+h4{
+    font-size:1.1rem;
+}
+
+label{
+    margin-bottom: 0;
+}
+.firstrow, .secondrow{
+    padding: 0px 15px;
+}
+
+.personalinfotitle{
+    /*display: inline;*/
+    margin-bottom: 0.5rem;
+}
+.mb-0.leg{
+    width: 160px;
+}
+
+.form-group{
+    margin-bottom:0px;
+}
+.col-form-label{
+    padding-right:0px;
+}
+
+.nav-tabs .nav-item{
+    width: 300px;
+}
+.nav-tabs .nav-item a{
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+.post-list-table{
+    border-collapse: collapse;
+    border:solid 1px #c0c0c0;
+}
+.post-list-table thead tr th{
+     border:solid 1px #c0c0c0;
+     padding:8px 0;
+}
+.post-list-table thead tr .no{
+    width: 50px;
+}
+.post-list-table thead tr .title{
+    width: 250px;
+}
+.post-list-table thead tr .body{
+    width: 300px;
+}
+.post-list-table thead tr .created{
+    width: 150px;
+}
+.post-list-table thead tr .updated{
+    width: 150px;
+}
+.post-list-table thead tr .actions{
+    width:200px;
+}
+.post-list-table tbody tr td{
+    padding:8px;
+    border:solid 1px #c0c0c0;
+}
+.post-list-table tbody tr:nth-child(odd){
+    background-color:#dde8f7;
+}

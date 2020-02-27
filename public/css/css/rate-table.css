@@ -1,0 +1,13 @@
+body{
+    font-family: "Times New Roman" !important;
+    font-size: 1em;
+}
+.create-room-table thead tr .guest-time{
+    width: 150px;
+}
+.create-room-table thead tr .citizen-rate{
+    width: 150px;
+}
+.create-room-table thead tr .foreigner-rate{
+    width: 150px;
+}

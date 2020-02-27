@@ -1,0 +1,25 @@
+body{
+    font-family: "Times New Roman" !important;
+    font-size: 1em;
+}
+.search-btn{
+    margin-top: 33px;
+}
+.summery-table{
+    border-collapse: collapse;
+    border:1px solid #ced4da;
+}
+.summery-table thead th{
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding:8px;
+    width: 150px;
+}
+.summery-table tbody tr td{
+    border: 1px solid #ced4da;
+    padding:5px 10px;
+    text-align: center;
+}
+.summery-table tbody tr:nth-child(odd){
+    background:#dde8f7;
+}

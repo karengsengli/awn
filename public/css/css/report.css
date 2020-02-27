@@ -1,0 +1,35 @@
+
+.main{
+    margin:100px 0; 
+    padding: 0px 100px;
+}
+.button-section{ 
+    padding: 0 100px 100px;
+}
+.report-table{
+    width:100%;
+}
+.description-table{
+    width:100%;
+}
+.cost{
+    font-size: 0.97em;
+}
+
+
+
+@media print {
+
+  .report-table {
+    font-family: "Times New Roman" !important;
+    font-size: 1.2em;
+  }
+  .description-table {
+    font-family: "Times New Roman" !important;
+    font-size: 1.2em;
+  }
+  .cost{
+    font-size: 1em;
+  }
+
+}

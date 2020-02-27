@@ -1,0 +1,76 @@
+
+body{
+    font-family:'Times New Roman' !important;
+    font-size:1em;
+}
+.room-list-table {
+  border-collapse: collapse;
+}
+
+.room-list{
+  border: 1px solid #ced4da;
+  width: 200px;
+  text-align: center;
+}
+
+.service-table .td-date{
+    padding:0 10px;
+    margin-bottom: 10px;
+}
+.service-table .td-id{
+    width: 100px;
+}
+.service-table .td-desc{
+    width: 200px;
+    padding:0 10px;
+}
+.service-table .td-qty{
+    width: 75px;
+}
+.service-table .td-rate{
+    width: 120px;
+    padding:0 10px;
+}
+.service-table .td-btn{
+    width: 100px;
+}
+
+.service-item-table{
+    border-collapse: collapse;
+}
+.service-item-table td, .service-item-table th{
+    border: 1px solid #ced4da;
+    text-align: center;
+}
+.service-item-no{
+    width: 75px;
+    padding:5px 0;
+}
+.service-item-name{
+    width: 200px;
+    padding:5px 0;
+}
+.service-item-qty{
+    width: 50px;
+    padding:5px 0;
+}
+.service-item-price{
+    width: 150px;
+    padding:5px 0;
+}
+.service-item-date{
+    width: 200px;
+    padding:5px 0;
+}
+.service-item-total{
+    padding:5px 0;
+}
+.service-price-total{
+    padding:5px 0;
+}
+.service-item-table tr:nth-child(odd){
+      background-color:#f7f7ff;
+}
+.service-item-table>thead>tr{
+      background-color:#dde8f7!important;
+}
