@@ -72,6 +72,26 @@
                                 <li class="nav-item"><a class="nav-link" href="/service">Services</a> 
                                 <li class="nav-item"><a class="nav-link" href="/blog">Blog</a>
                                 <li class="nav-item active"><a class="nav-link" href="/contact">Contact</a></li>
+                                    @guest
+
+                                    @else
+                                    <li class="dropdown nav-item">
+
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{Auth::user()->name}}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      
+                                      <a class="nav-link" href="/template">Admin Pannel</a>
+                                     
+                                      <a class="dropdown-item" href="{{route('logout')}}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a>
+
+                                      <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
+                                          @csrf
+                                      </form>
+                                  </div>
+                              </li>
+                              @endguest
                             </ul>
                         </div> 
                     </div>

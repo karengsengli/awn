@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendMail extends Mailable
+class Sendnoti extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from('senglikareng@gmail.com')->subject('New Message From Your portfolio Contact Form')->view('dynamic_email_template')->with('data', $this->data);
+        return $this->from('senglikareng@gmail.com')->subject('New Post is Ready! ')->view('response')->with('data', $this->data);
     }
 }

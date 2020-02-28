@@ -13,9 +13,7 @@
 
 Route::get('/','Home_Controller@home')->name('home');
 Route::get('/get_3paragraph','Home_Controller@home_paragraph')->name('gp');
-Route::get('/template', function () {
-    return view('admin.template');
-});
+Route::get('/template', 'Post_Controller@template');
 Route::get('/blog','Post_Controller@view_post')->name('allpost');
 
 Route::post('/save_blog_post','Post_Controller@save_post')->name('blogsave');
@@ -59,9 +57,9 @@ Route::get('pagination/project_fetch_data', 'Home_Controller@fetch_data');
 
 
 
-Route::get('/my_template',function(){
+/*Route::get('/my_template',function(){
     return view('user_template');
-});
+});*/
 Route::get('/contact',function(){
     return view('contact');
 });
@@ -77,9 +75,15 @@ Route::get('/service',function(){
 Route::get('ajax-pagination','AjaxController@ajaxPagination')->name('ajax.pagination');
 
 Route::post('/sendemail/send', 'Contact_Controller@send');
+Route::post('/newsletters', 'Contact_Controller@newsletters');
+Route::get('/remove_subscribe/{id}', 'Contact_Controller@remove_subscribe');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

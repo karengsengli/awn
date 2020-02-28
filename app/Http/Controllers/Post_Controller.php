@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog_Post;
 use App\Category;
+use App\Newsletter;
 use Session;
+use App\Mail\Sendnoti;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,6 +18,11 @@ class Post_Controller extends Controller
         {
             $this->middleware('auth', ['except' => ['view_post','single_post','top_posts','fetch_data']]);
         }
+
+    public function template(){
+        return view("admin.template");
+
+    }    
     
     public function view(){
         $categorys=Category::all();
@@ -47,8 +55,6 @@ class Post_Controller extends Controller
             "detail" =>'required|min:3'  ,
             "category_id" => 'required'
         ]);
-
-
         if($request->hasFile('img')){
             $photo = $request->file('img');
             $name = time() . '.'.$photo->getClientOriginalExtension();
@@ -59,6 +65,7 @@ class Post_Controller extends Controller
         else{
             $photo = '';
         }
+        
         $post = new Blog_Post;
         $post->title = request('post');
         $post->details = request('detail');
@@ -67,6 +74,16 @@ class Post_Controller extends Controller
         $post->view = 0;
         $post->save();
         $posts = Blog_Post::all();
+         $allmails=Newsletter::all();
+
+        $data = array(
+            'title'   =>  request('post'),
+            'id'   =>  $post->id,
+        ); 
+        foreach ($allmails as $mail){   
+            Mail::to($mail->mail)->send(new Sendnoti($data));
+        };
+
         Session::flash('message', 'Save Success');
         return redirect()->route('admin_blog')->with('posts');
     }

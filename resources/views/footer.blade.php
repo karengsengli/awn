@@ -58,6 +58,51 @@
             </div>
         </div>
 
+        <div id="unsubscribe" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2><span id="news_email"></span></h2>
+                        <h4> is already subscribed</h4>
+                        <p>Thank you for keep in touch with me</p>
+                    </div>
+                    <div class="modal-footer border-top-0">
+                        <input type="hidden" id="my_news_id">
+                        <a href="#" class="btn btn-warning btn-sm " id="unsubscribe_my_mail">unsubscribe ?</a>
+                        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Cancel</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div id="subscribe" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Successfully subscribed</h2>
+                        <p>Thank you for keep in touch with me</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="remove_unsubscribe" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Successfully unsubscribed</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Modals error -->
 
         <div id="error" class="modal modal-message fade" role="dialog">
@@ -73,6 +118,7 @@
                 </div>
             </div>
         </div>
+
         <!--================End Contact Success and Error message Area =================-->
         
         
@@ -105,7 +151,25 @@
                     },
                     error: function(request, status, error){
                     }
-                });                
+                });    
+            $('#unsubscribe_my_mail').click(function(event) {
+            event.preventDefault();
+                   var id=$('#my_news_id').val();
+                   $.ajax({
+                      url: "/remove_subscribe/"+id,
+                      type: 'GET',
+                      success: function(response){
+                        $('#unsubscribe').modal('hide');
+                        $('#email').val('');
+                        $('#remove_unsubscribe').modal('show');
+                        },
+                        error: function(request, status, error){
+                            $('#unsubscribe').modal('hide');
+                            $('#email').val('');
+                            $('#error').modal('show');
+                        }
+                    });
+                });           
             });
     </script>
 </html>

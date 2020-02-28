@@ -4,7 +4,7 @@
               <h1 class="h3 mb-4 text-gray-800">Post List</h1>
 
           <div style="overflow-x:auto;">
-            <table class="post-list-table" style="width: max-content;">
+            <table class="post-list-table" style="width: max-content;" id="myTable">
               <thead>
                   <tr class="bg-primary text-white text-center">
                       <th class="no">No</th>
@@ -61,6 +61,7 @@
 
    <script>
      $(document).ready(function($) {
+      $('#myTable').DataTable();
       $(".delete_btn").click(function(event) {
         var id=$(this).attr('data-id');  
         var title=$(this).attr('data-title');

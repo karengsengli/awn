@@ -98,15 +98,18 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nemo, perferendis dolorem, tempore
                                 </p>
                                 <div class="form-group d-flex flex-row">
+                                    
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                                         </div>
-                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" name="email" >
                                     </div>
-                                    <a href="#" class="bbtns">Subcribe</a>
+                                    
+                                    <a href="#" class="bbtns" id="save">Subcribe</a>
+                                    
                                 </div>  
-                                <p class="text-bottom">You can unsubscribe at any time</p>  
+                                <p class="text-bottom" id="newstext">You can unsubscribe at any time</p>  
                                 <div class="br"></div>                          
                             </aside>
                         </div>
@@ -204,6 +207,41 @@
                     error: function(request, status, error){
                     }
                 });
+
+        $('#save').click(function(event) {
+                event.preventDefault();
+                var email=$('#email').val();
+                if (email=='') {
+
+                }
+                else{
+                     $.ajax({
+                         type: "POST",
+                         url: "/newsletters",
+                         data: { "_token": "{{ csrf_token() }}", email: email} ,
+                         success: function(response){
+                            if (response[0]=='You already subscribe') {
+                                
+                                $('#unsubscribe').modal('show');
+                                $('#news_email').text(response[2]);
+                                $('#my_news_id').val(response[1]);
+
+                            }
+                            else{
+                                $('#email').val('');
+                                $('#subscribe').modal('show');
+                            }
+                            $('#newstext').text(response[0]);
+                         },
+                         error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            $('#newstext').text('please check your email');
+                          }
+                 });
+
+                }
+                
+            });
+        
 
        /* $(document).on('click', '.pagination a',function(event)
 
